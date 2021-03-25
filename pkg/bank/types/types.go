@@ -30,6 +30,12 @@ type Card struct {
 
 // Payment представляет информацию о платеже.
 type Payment struct {
-	ID int
+	ID     int
 	Amount Money
 }
+
+type PaymentSource struct {
+	Type    string // 'card'
+	Number  string // номер вида '5058 xxxx xxxx 8888'
+	Balance Money // баланс в дирамах
+}   
